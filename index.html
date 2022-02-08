@@ -17,8 +17,14 @@
       box-sizing: border-box;
     }
     body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       width: 100vw;
       font-family: sans-serif;
+      background-color: black;
+      color: white;
     }
     ul {
       margin: 20px;
@@ -35,10 +41,48 @@
       gap: 10px;
       justify-content: flex-start;
     }
-    input {
-      border: none;
+
+    .checkbox-container {
+      position: relative;
       min-width: 50px;
       min-height: 50px;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .checkbox-container input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    .checkbox {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 50px;
+      width: 50px;
+      background-color: white;
+      border-radius: 8px;
+    }
+    .checkbox-container input:checked ~ .checkbox {
+      background-color: darkcyan;
+    }
+    .checkbox:after {
+      content: '💪';
+      position: absolute;
+      display: none;
+    }
+    .checkbox-container input:checked ~ .checkbox:after {
+      display: block;
+    }
+    .checkbox-container .checkbox:after {
+      left: 13px;
+      top: 11px;
     }
     .workout-details-container {
       display: block;

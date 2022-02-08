@@ -75,7 +75,15 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       activityMethod = `${workout.sets} sets of ${workout.reps}`
     }
-    newListItem.innerHTML = `<input type="checkbox" /><div class="image-container"><img src=${workout.image} /></div><div class="workout-details-container">
+    newListItem.innerHTML = `
+  <label class="checkbox-container">
+    <input type="checkbox" />
+    <span class="checkbox"></span>
+  </label>
+  <div class="image-container">
+    <img src=${workout.image} />
+  </div>
+  <div class="workout-details-container">
     <h2>${workout.name}</h2>
     <p>${activityMethod}</p>
   </div>`
