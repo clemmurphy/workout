@@ -7,72 +7,55 @@
     <title>Workout Plan</title>
   </head>
   <body>
-    <ul>
-      <li>
-        <input type="checkbox" />
-        <h2>Plate thrusters (15 reps x 3 sets)</h2>
-      </li>
-      <li>
-        <input type="checkbox" />
-        <h2>Mountain climbers (20 reps x 3 sets)</h2>
-      </li>
-      <li>
-        <input type="checkbox" />
-        <h2>Box jumps (10 reps x 3 sets)</h2>
-      </li>
-      <li>
-        <input type="checkbox" />
-        <h2>Walk outs (10 reps x 3 sets)</h2>
-      </li>
-      <li>
-        <input type="checkbox" />
-        <h2>Renegade rows (full plank/kneeling) (10 each side x 3 sets)</h2>
-      </li>
-      <li>
-        <input type="checkbox" />
-        <h2>Press ups (full plank/kneeling) (15 reps x 3 sets)</h2>
-      </li>
-      <li>
-        <input type="checkbox" />
-        <h2>Treadmill 10 min run/steep incline brisk walk (no hands)</h2>
-      </li>
-      <li>
-        <input type="checkbox" />
-        <h2>Supermans (full plank/kneeling) (10 reps x 3 sets)</h2>
-      </li>
-      <li>
-        <input type="checkbox" />
-        <h2>Crunches (10 reps x 3 sets)</h2>
-      </li>
-    </ul>
+    <script src="app.js"></script>
+    <ul id="workoutList"></ul>
   </body>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       width: 100vw;
       font-family: sans-serif;
     }
     ul {
+      margin: 20px;
       list-style: none;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       flex-direction: column;
-      gap: 10px;
-      max-width: 400px;
+      gap: 20px;
     }
     li {
       display: flex;
       flex-direction: row;
-      justify-content: left;
-      list-style: none;
+      gap: 10px;
+      justify-content: flex-start;
     }
     input {
-      min-height: 60px;
-      min-width: 60px;
+      border: none;
+      min-width: 50px;
+      min-height: 50px;
+    }
+    .workout-details-container {
+      display: block;
+    }
+    .image-container {
+      height: 50px;
+      min-width: 80px;
+      max-width: 80px;
+      background-position: center;
+      background-size: cover;
+    }
+    .image-container > img {
+      height: 100%;
+      width: 100%;
+    }
+    h2 {
+      font-size: 20px;
     }
   </style>
 </html>
